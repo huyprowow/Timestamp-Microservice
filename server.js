@@ -27,8 +27,8 @@ app.get("/api/hello", function (req, res) {
 app.get("/api/:date?", (req, res) => {
   if (req.params.date === undefined) {
     res.json({
-      unixDate: Date.now(),
-      UTCDate: new Date(Date.now()).toUTCString(),
+      unix: Date.now(),
+      utc: new Date(Date.now()).toUTCString(),
     });
   }
   const regex = /\s+|\-+|\,+|\.+/g;
